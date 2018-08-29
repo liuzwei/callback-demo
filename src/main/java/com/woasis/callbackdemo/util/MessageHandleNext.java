@@ -48,11 +48,14 @@ public class MessageHandleNext implements Runnable {
     }
 
     private void remoteCallback(WorkOrderMessage message){
+        //实例接口对象
         WorkOrderMessageInterface workOrderMessageInterface = RetrofitHelper.instance().create(WorkOrderMessageInterface.class);
 
+        //调用接口方法
         Call<JSONObject> objectCall = workOrderMessageInterface.updateBatteryInfo(message);
         System.out.println("远程调用执行："+new Date());
 
+        //异步调用执行
         objectCall.enqueue(new Callback<JSONObject>() {
             @Override
             public void onResponse(Call<JSONObject> call, Response<JSONObject> response) {

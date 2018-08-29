@@ -8,7 +8,7 @@ import retrofit2.http.POST;
 
 public interface WorkOrderMessageInterface {
 
-    @POST("/api/batteryInfo/save")
+    @POST("/api")
     Call<JSONObject> updateBatteryInfo(@Body WorkOrderMessage message);
 
 }

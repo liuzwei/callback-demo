@@ -1,6 +1,5 @@
 package com.woasis.callbackdemo.bean;
 
-import com.sun.javafx.collections.MappingChange;
 
 /**
  * 回调策略
