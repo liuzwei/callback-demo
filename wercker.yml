@@ -17,3 +17,13 @@ build:
     goals: clean install
     cache_repo: true
     version: 3.5.2
+
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $DOCKER_USERNAME
+        password: $DOCKER_PASSWORD
+        port: "8080"
+        tag: latest
+        repository: liuzwei/callback-demo
+        registry: https://hub.docker.com/
