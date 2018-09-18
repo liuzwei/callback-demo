@@ -26,4 +26,4 @@ deploy:
         port: "8080"
         tag: latest
         repository: liuzwei/callback-demo
-        registry: https://hub.docker.com/
+        registry: https://hub.docker.com
